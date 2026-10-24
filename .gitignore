@@ -1,0 +1,117 @@
+# ==========================================
+# Git Ignore Configuration
+# ==========================================
+
+# --- Environment Variables & Secrets ---
+# Never commit credentials, API keys, or private tokens!
+.env
+.env.*
+*.env
+*.local
+!.env.example
+*.pem
+*.key
+
+# --- Python & Virtual Environments ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+
+# Virtual Environments
+venv/
+.venv/
+env/
+ENV/
+venv*/
+env*/
+
+# --- Machine Learning Models & Large Checkpoints ---
+# GitHub rejects single files > 100MB; keep weights local or in cloud storage
+*.pth
+*.pt
+*.bin
+*.onnx
+*.safetensors
+*.h5
+*.tflite
+*.ckpt
+*.pkl
+*.pickle
+*.joblib
+backend/*.pth
+backend/app/*.pth
+
+# --- Databases & Local State ---
+*.db
+*.sqlite
+*.sqlite3
+backend/app/*.db
+backend/app/forensiq.db
+
+# --- Runtime Uploads & Media Storage ---
+backend/app/uploads/*
+!backend/app/uploads/.gitkeep
+
+# --- Node / Frontend Build & Dependencies ---
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/*.local
+.npm/
+.eslintcache
+.stylelintcache
+*.tsbuildinfo
+
+# Node / Package Manager Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# --- IDE & Editor Settings ---
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# --- Operating System Files ---
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
